@@ -8,7 +8,9 @@ To test Urban Scooter, a service that allows users to rent electric scooters, by
 
 ## Defining the problem
 
-The application needed to be tested to identify functional defects, verify input validation, and ensure that key features worked as expected across web and mobile platforms. API requests also needed to be validated to check that order creation, authentication, retrieval, and cancellation behaved according to the requirements
+In a scooter rental platform like Urban Scooter, smooth user interactions across web, mobile apps, and backend APIs are vital for user retention. Unvalidated form fields, broken API response codes (e.g., returning 504 instead of 400), or delayed courier push notifications directly degrade the user experience, leading to frustrated customers, failed bookings, and potential revenue loss. 
+
+The application required a comprehensive testing strategy to identify functional defects, validate input boundaries (preventing invalid data entry), ensure cross-platform compatibility, and verify secure API authentication and order creation.
 
 ## What I Did
 
@@ -23,22 +25,31 @@ The application needed to be tested to identify functional defects, verify input
 
 Figma · Chrome DevTools · Postman · Jira · Requirements Analysis · Test Case Design · Equivalence Partitioning · Functional Testing · Cross-Browser Testing · Mobile Testing · REST API Testing
 
-## Results / Learnings
+## Results 
 
-Validated key user flows across web and mobile applications, tested REST API operations, and documented identified defects in Jira to support issue tracking and follow-up.
+- Identified and documented 40 bug reports in Jira during requirements analysis and test execution
+- Catching input-validation defects early prevented incorrect data persistence in user profiles and rental forms.
+- Validated REST endpoints using Postman; uncovered critical API discrepancies (such as a 504 Gateway Timeout returned instead of a 400 Bad Request during authentication failures), highlighting backend error-handling vulnerabilities that required developer attention.
+- Verified push notification workflows under specific connectivity conditions, ensuring reliable task assignments for couriers.
 
--  Improved my ability to translate requirements into test scenarios and test cases.
--  Practiced functional, cross-browser, mobile, and REST API testing.
--  Strengthened my skills in defect documentation and tracking using Jira.
--  Learned to use Figma designs and requirements as references for validating expected application behavior.
+## Learnings
+
+- Improved the ability to translate Figma designs and software requirements into structured test cases using Equivalence Partitioning.
+- Strengthened end-to-end defect tracking and reporting skills using Jira.
 
 ## Test Evidence
 [Link to the complete mind map of the “Order” form](https://drive.google.com/file/d/1kFhY5c1sYZJ3bJnGAdRBF3rC8PhjI0vv/view?usp=drive_link)
 
+Demonstrates the comprehensive test coverage for both the "Who is the scooter for?" and "Rental" forms. It maps out design (UI) requirements and functional workflows to identify edge cases and input boundaries.
 <br>
 
-Excerpt from the mind map of the “Rental” form functionality within the order form
+- Excerpt from the mind map of the “Rental” form functionality within the order form
 <img width="804" height="645" alt="mapa scooter" src="https://github.com/user-attachments/assets/b2f1aa15-2a72-4308-b1fb-09d84ed07d2f" />
+
+
+<br><br>
+
+**This evidence, the 3 tables below, verifies the expected vs. actual behavior for input fields (character limits, special characters) and courier push notifications under specific connectivity scenarios.**
 
 <br>
 
@@ -55,15 +66,17 @@ Excerpt from the test cases designed to test the courier notification features f
 Excerpt showing the checklist designed and the API tested against the requirements
 <img width="730" height="319" alt="imagen (2)" src="https://github.com/user-attachments/assets/b13bfaf8-72b1-480f-9b82-8536769cf6f8" />
 
+
+
 <br>
 
-Bug report and Postman screenshot as evidence
+**Bug report and Postman screenshot as evidence**
 
 <img width="404" height="713" alt="informe_error" src="https://github.com/user-attachments/assets/7bbb2842-c929-4bb0-b2d1-247f41096515" />
 
 <br><br>
 
-<p>A total of 40 bug reports were identified during requirements analysis</p>
+<p>- A total of 40 bug reports were identified during requirements analysis</p>
 <p>
 <img width="1513" height="762" alt="imagen (3)" src="https://github.com/user-attachments/assets/c04bd13f-0713-4b1e-8fd7-d51c59f49d54" />
 </p>
