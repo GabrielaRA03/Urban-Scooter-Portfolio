@@ -37,6 +37,15 @@ Figma · Chrome DevTools · Postman · Jira · Requirements Analysis · Test Cas
 - Improved the ability to translate Figma designs and software requirements into structured test cases using Equivalence Partitioning.
 - Strengthened end-to-end defect tracking and reporting skills using Jira.
 
+## Recommendations & Quality Improvements
+
+Based on the testing findings and identified defects, the following improvements are recommended to enhance system reliability and user experience:
+
+- **Standardize Backend API Error Handling:** Implement proper HTTP response status codes. Authentication failures and bad requests should return 400 Bad Request or 401 Unauthorized instead of 504 Gateway Timeout to provide clear error messages to both client applications and end-users.
+- **Client-Side Form Validation:** Enforce strict client-side validation rules on rental and user profile forms before sending payloads to the API, preventing invalid data submission and reducing unnecessary server load.
+- **Push Notification Retry Mechanism:** Implement an automatic retry mechanism and offline queueing for courier push notifications to guarantee critical task assignment delivery under unstable network conditions.
+- **Automate Regression Suites:** Transition the high-priority manual test scenarios (order creation and API status code verification) into automated tests using PyTest to streamline future regression testing.
+
 ## Test Evidence
 [Link to the complete mind map of the “Order” form](https://drive.google.com/file/d/1kFhY5c1sYZJ3bJnGAdRBF3rC8PhjI0vv/view?usp=drive_link)
 
@@ -66,8 +75,6 @@ Excerpt from the test cases designed to test the courier notification features f
 Excerpt showing the checklist designed and the API tested against the requirements
 <img width="730" height="319" alt="imagen (2)" src="https://github.com/user-attachments/assets/b13bfaf8-72b1-480f-9b82-8536769cf6f8" />
 
-
-
 <br>
 
 **Bug report and Postman screenshot as evidence**
@@ -75,6 +82,12 @@ Excerpt showing the checklist designed and the API tested against the requiremen
 <img width="404" height="713" alt="informe_error" src="https://github.com/user-attachments/assets/7bbb2842-c929-4bb0-b2d1-247f41096515" />
 
 <br><br>
+
+<img width="799" height="505" alt="imagen(1)" src="https://github.com/user-attachments/assets/907d6770-bbc4-4b9d-83c5-8905bb0ee01a" />
+
+
+<br><br>
+
 
 <p>- A total of 40 bug reports were identified during requirements analysis</p>
 <p>
